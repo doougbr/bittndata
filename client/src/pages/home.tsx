@@ -90,8 +90,8 @@ export default function Home() {
               },
               {
                 icon: BrainCircuit,
-                title: "IA & Machine Learning",
-                description: "Aproveite modelos preditivos para automatizar processos e descobrir oportunidades ocultas.",
+                title: "Cursos e Treinamentos",
+                description: "Aulas particulares ou em grupo para desenvolvimento pessoal ou de sua equipe.",
               },
               {
                 icon: BarChart3,
@@ -182,9 +182,9 @@ export default function Home() {
               
               <div className="space-y-6">
                 {[
-                  { icon: Zap, title: "Implementação Rápida", desc: "Implante soluções 2x mais rápido com nossos frameworks modulares." },
-                  { icon: ShieldCheck, title: "Segurança Empresarial", desc: "Criptografia de nível bancário e padrões de conformidade integrados." },
-                  { icon: Globe, title: "Escalabilidade Global", desc: "Infraestrutura projetada para lidar com petabytes de dados em todo o mundo." },
+                  { icon: Zap, title: "Implementação Ponta a Ponta", desc: "Estruturação completa de sua base de dados para tomadas de decisão." },
+                  { icon: ShieldCheck, title: "Atendimento Personalizado", desc: "Soluções feitas sob medida para a sua necessidade." },
+                  { icon: Globe, title: "Diagnóstico Inicial Gratuito", desc: "Entenda a maturidade de sua empresa e as reais necessidades de implantação." },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-secondary/20 text-secondary border border-secondary/30">

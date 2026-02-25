@@ -9,11 +9,11 @@ import { Badge } from "@/components/ui/badge";
 const posts = [
   {
     slug: "transformacao-power-bi",
-    title: "Como o Power BI pode transformar sua tomada de decisão",
-    date: "2024-03-20",
-    excerpt: "Descubra como a visualização de dados pode revelar insights ocultos e impulsionar o crescimento do seu negócio.",
+    title: "O que realmente melhora e velocidade de relatórios de BI (e quase ninguém fala)",
+    date: "2026-02-26",
+    excerpt: "Dicas que quase ninguém fala e que vão dar um belo up na velocidade de seus relatórios.",
     author: "Douglas Bittencourt Ribeiro",
-    category: "Business Intelligence"
+    category: "Arquitetura"
   },
   {
     slug: "arquitetura-dados",
