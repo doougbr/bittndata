@@ -2,10 +2,33 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, BarChart3, Database, BrainCircuit, ShieldCheck, Zap, Globe } from "lucide-react";
+import { ArrowRight, BarChart3, Database, BrainCircuit, ShieldCheck, Zap, Globe, GraduationCap, ArrowRightLeft } from "lucide-react";
 import heroBg from "../assets/hero-bg.png";
 
 export default function Home() {
+  const mainServices = [
+    {
+      title: "Aulas de Excel e Power BI",
+      description: "Capacite sua equipe com treinamentos personalizados em Excel e Power BI adaptados ao seu negócio.",
+      icon: GraduationCap,
+    },
+    {
+      title: "Migração de BI",
+      description: "Transição suave e segura de suas ferramentas de Business Intelligence garantindo a integridade dos dados.",
+      icon: ArrowRightLeft,
+    },
+    {
+      title: "Estruturação de Banco de Dados",
+      description: "Desenvolvimento de arquiteturas de dados sólidas e escaláveis para garantir performance e segurança.",
+      icon: Database,
+    },
+    {
+      title: "Automação de Ingestão de Dados",
+      description: "Elimine processos manuais com pipelines automatizados que coletam e transformam seus dados.",
+      icon: Zap,
+    }
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -48,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Expertise Section */}
       <section className="py-24 bg-background/50">
         <div className="container px-4 md:px-6">
           <div className="mb-16 text-center">
@@ -58,7 +81,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3 mb-24">
             {[
               {
                 icon: Database,
@@ -98,6 +121,47 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl text-foreground">Serviços Especializados</h2>
+            <p className="mx-auto max-w-2xl text-muted-foreground text-lg">
+              Soluções técnicas focadas em resultados imediatos e eficiência operacional.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {mainServices.map((service, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="group relative h-full overflow-hidden border-white/10 bg-white/5 transition-all hover:-translate-y-1 hover:border-primary/50">
+                  <CardHeader>
+                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="h-5 w-5" />
+                    </div>
+                    <CardTitle className="text-lg">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-sm text-muted-foreground">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Button asChild variant="ghost" className="text-primary hover:text-primary/80 group">
+              <Link href="/services" className="flex items-center">
+                Ver todos os detalhes <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
