@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowRight, BarChart3, Database, BrainCircuit, ShieldCheck, Zap, Globe, GraduationCap, ArrowRightLeft } from "lucide-react";
-import heroBg from "../assets/hero-bg.png";
+import heroBg from "../assets/hero-bg.webp";
 
 export default function Home() {
   const mainServices = [
