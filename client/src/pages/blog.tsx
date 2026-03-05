@@ -8,20 +8,28 @@ import { Badge } from "@/components/ui/badge";
 // For this prototype, we'll keep the list synchronized with the files we created
 const posts = [
   {
+    slug: "aprendendo-a-aprender",
+    title: "Aprendendo a aprender",
+    date: "2026-03-04",
+    excerpt: "Dicas que podem ajudar no seu processo de aprendizado",
+    author: "Douglas Bittencourt Ribeiro",
+    category: "Desenvolvimento Pessoal"
+  },
+  {
     slug: "transformacao-power-bi",
     title: "O que realmente melhora e velocidade de relatórios de BI (e quase ninguém fala)",
     date: "2026-02-26",
     excerpt: "Dicas que quase ninguém fala e que vão dar um belo up na velocidade de seus relatórios.",
     author: "Douglas Bittencourt Ribeiro",
-    category: "Arquitetura"
+    category: "Business Intelligence"
   },
   {
-    slug: "arquitetura-dados",
+    slug: "reduzindo-custos-bi",
     title: "A importância da Arquitetura de Dados",
-    date: "2024-03-15",
-    excerpt: "Antes de analisar, é preciso estruturar. Saiba por que uma base sólida é crucial para qualquer estratégia de IA.",
+    date: "2026-02-15",
+    excerpt: "Redução de custos é uma constante em toda a empresa. Vou te mostrar uma alternativa viável.",
     author: "Douglas Bittencourt Ribeiro",
-    category: "Arquitetura"
+    category: "Business Intelligence"
   }
 ];
 

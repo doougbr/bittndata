@@ -136,7 +136,7 @@ SELECT ...
 Essas são algumas dicas de situações que acabam aparecendo no dia-a-dia e que com certeza serão úteis em algum momento. Você usa alguma delas?`
 
   },
-  "reduzindo-custos-BI": {
+  "reduzindo-custos-bi": {
     title: "Quer reduzir os custos de BI da sua empresa? Te apresento o Metabase",
     date: "2026-02-15",
     author: "Douglas Bittencourt Ribeiro",
