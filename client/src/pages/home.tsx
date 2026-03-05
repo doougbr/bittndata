@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link } from "wouter";
-import { ArrowRight, BarChart3, Database, BrainCircuit, ShieldCheck, Zap, Globe, GraduationCap, ArrowRightLeft } from "lucide-react";
+import { ArrowRight, BarChart3, Database, BrainCircuit, ShieldCheck, Zap, Globe, GraduationCap, ArrowRightLeft, LayoutGrid, Users, ClipboardCheck } from "lucide-react";
 import heroBg from "../assets/hero-bg.webp";
 
 export default function Home() {
@@ -29,6 +29,24 @@ export default function Home() {
     }
   ];
 
+  const differentiators = [
+    { 
+      icon: LayoutGrid, 
+      title: "Implementação Ponta a Ponta", 
+      desc: "Estruturação completa de sua base de dados para tomadas de decisão." 
+    },
+    { 
+      icon: Users, 
+      title: "Atendimento Personalizado", 
+      desc: "Soluções feitas sob medida para a sua necessidade." 
+    },
+    { 
+      icon: ClipboardCheck, 
+      title: "Diagnóstico Inicial Gratuito", 
+      desc: "Entenda a maturidade de sua empresa e as reais necessidades de implantação." 
+    },
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -38,6 +56,8 @@ export default function Home() {
             src={heroBg} 
             alt="Data Background" 
             className="h-full w-full object-cover opacity-40 mix-blend-screen"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/60 to-background" />
         </div>
@@ -90,8 +110,8 @@ export default function Home() {
               },
               {
                 icon: BrainCircuit,
-                title: "Cursos e Treinamentos",
-                description: "Aulas particulares ou em grupo para desenvolvimento pessoal ou de sua equipe.",
+                title: "IA & Machine Learning",
+                description: "Aproveite modelos preditivos para automatizar processos e descobrir oportunidades ocultas.",
               },
               {
                 icon: BarChart3,
@@ -181,11 +201,7 @@ export default function Home() {
               </p>
               
               <div className="space-y-6">
-                {[
-                  { icon: Zap, title: "Implementação Ponta a Ponta", desc: "Estruturação completa de sua base de dados para tomadas de decisão." },
-                  { icon: ShieldCheck, title: "Atendimento Personalizado", desc: "Soluções feitas sob medida para a sua necessidade." },
-                  { icon: Globe, title: "Diagnóstico Inicial Gratuito", desc: "Entenda a maturidade de sua empresa e as reais necessidades de implantação." },
-                ].map((item, i) => (
+                {differentiators.map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-secondary/20 text-secondary border border-secondary/30">
                       <item.icon className="h-6 w-6" />
