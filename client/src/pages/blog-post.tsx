@@ -11,6 +11,7 @@ const postsData: Record<string, any> = {
     title: "Aprendendo a aprender",
     date: "2026-03-04",
     author: "Douglas Bittencourt Ribeiro",
+    coverImage: "/images/loading-post-cover.png",
     content: `Dicas que podem ajudar no seu processo de aprendizado.
 
 Você já tentou aprender Excel, Power BI, SQL ou qualquer ferramenta de dados e o conteúdo simplesmente não entra na sua cabeça? Me dá 5 minutinhos que vou te explicar o motivo e algumas possíveis soluções para isso.
